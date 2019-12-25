@@ -1,0 +1,122 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"coverView": true,
+		"autoAudits": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		}
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.9.0",
+	"appid": "wx2d3d4b6c0a11a93d",
+	"projectname": "scool-system",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": -1,
+					"name": "问题征集",
+					"pathName": "pages/Question-Collection/home/home",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "征集-选择题",
+					"pathName": "pages/Question-Collection/choice-question/choice-question",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "征集-判断题",
+					"pathName": "pages/Question-Collection/judgement-question/judgement-question",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "征集-填空题",
+					"pathName": "pages/Question-Collection/fill-in-the-blanks/fill-in-the-blanks",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 4,
+					"name": "首页",
+					"pathName": "pages/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 5,
+					"name": "个人中心",
+					"pathName": "pages/Personal-Center/home/home",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "小程序评价",
+					"pathName": "pages/Personal-Center/comment/comment",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "校友登录",
+					"pathName": "pages/Alumni-login/home/home",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "情怀测试",
+					"pathName": "pages/Emotional-test/home/home",
+					"scene": null
+				}
+			]
+		}
+	}
+}

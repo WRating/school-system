@@ -1,0 +1,35 @@
+<!--pages/Question-Collection/judgement-question/judgement-question.wxml-->s
+<cu-custom bgColor="bg-gradual-blue" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">校友趣味系统</view>
+</cu-custom>
+
+<form bindsubmit='formsubmit'>
+    <view class="padding-top bg-white">
+      <view class='margin-left text-lg'>请输入问题:</view>
+      <view class="cu-form-group margin solid">
+        <textarea name='judge_ques' bindinput="textareaAInput" maxlength="-1">
+          <!-- 多行文本输入框 -->
+        </textarea>
+      </view>
+      <view class='margin-left text-lg'>请选择答案（对或错）:</view>
+      <view class="cu-form-group margin solid">
+
+        <textarea name='judge_right' bindinput="textareaBInput" maxlength="-1"></textarea>
+      </view>
+      <view class='margin-left text-lg'>答案解析:</view>
+      <view class="cu-form-group margin solid">
+        <textarea name='judge_ans' bindinput="textareaCInput" maxlength="-1"></textarea>
+      </view>
+      <!-- 上传图片 -->
+ <!-- <view class="solids imgstyle" bindtap="uploadimg" wx:if="{{imgList.length<2}}">
+        <text class="cuIcon-cameraadd"></text>
+      </view> -->
+
+</view> -->
+    <!-- 底部button -->
+    <view class="cu-bar btn-group">
+      <button class="cu-btn bg-green shadow-blur round" bindtap="uploadimg">上传图片</button>
+      <button class="cu-btn bg-blue shadow-blur round" form-type='submit'>提交</button>
+    </view>
+</form>

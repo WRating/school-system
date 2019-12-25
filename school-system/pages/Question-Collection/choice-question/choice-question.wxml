@@ -1,0 +1,42 @@
+<!--pages/Question-Collection/choice-question/choice-question.wxml-->
+<cu-custom bgColor="bg-gradual-blue" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">校友趣味系统</view>
+</cu-custom>
+
+<form bindsubmit='formsubmit'>
+  <view class="padding-top bg-white">
+    <view class='margin-left text-lg'>请输入问题:</view>
+    <view class="cu-form-group margin solid">
+      <textarea name='choice_ques' bindinput="textareaAInput" maxlength="-1">
+        <!-- 多行文本输入框 -->
+      </textarea>
+    </view>
+    <view class='margin-left text-lg'>答案:</view>
+    <view class="cu-form-group margin solid">
+      <textarea name='choice_right' bindinput="textareaBInput" maxlength="-1"></textarea>
+    </view>
+    <view class='margin-left text-lg'>选项一:</view>
+    <view class="cu-form-group margin solid">
+      <textarea name='choice_wrong1' bindinput="textareaBInput" maxlength="-1"></textarea>
+    </view>
+    <view class='margin-left text-lg'>选项二:</view>
+    <view class="cu-form-group margin solid">
+      <textarea name='choice_wrong2' bindinput="textareaBInput" maxlength="-1"></textarea>
+    </view>
+    <view class='margin-left text-lg'>选项三:</view>
+    <view class="cu-form-group margin solid">
+      <textarea name='choice_wrong3' bindinput="textareaBInput" maxlength="-1"></textarea>
+    </view>
+    <view class='margin-left text-lg'>答案解析:</view>
+    <view class="cu-form-group margin solid">
+      <textarea name='choice_ans' bindinput="textareaBInput" maxlength="-1"></textarea>
+    </view>
+  </view>
+
+  <!-- 底部button -->
+  <view class="cu-bar btn-group">
+    <button class="cu-btn bg-green shadow-blur round" bindtap="uploadimg">上传图片</button>
+    <button class="cu-btn bg-blue shadow-blur round" form-type='submit'>提交</button>
+  </view>
+</form>

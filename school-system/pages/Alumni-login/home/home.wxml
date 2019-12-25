@@ -1,0 +1,38 @@
+<!--pages/Alumni-login/home/home.wxml-->
+<cu-custom bgColor="bg-gradual-blue">
+  <view slot="content">用户登录</view>
+</cu-custom>
+
+<swiper class="card-swiper {{DotStyle?'square-dot':'round-dot'}}" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500" bindchange="cardSwiper" indicator-color="#8799a3" indicator-active-color="#0081ff">
+  <swiper-item wx:for="{{swiperList}}" wx:key class="{{cardCur==index?'cur':''}}">
+    <view class="swiper-item">
+      <image src="{{item.url}}" mode="aspectFill" wx:if="{{item.type=='image'}}"></image>
+      <video src="{{item.url}}" autoplay loop muted show-play-btn="{{false}}" controls="{{false}}" objectFit="cover" wx:if="{{item.type=='video'}}"></video>
+    </view>
+  </swiper-item>
+</swiper>
+
+<form bindsubmit='formsubmit'>
+  <view class="padding-xl bg-white">
+    <view class='text-center'>
+      <image src="/images/logo.jpg" class='img'>
+        </image>
+    </view>
+    <view class='margin'>
+      <view class='margin-bottom'>学号</view>
+      <input class="inputstyle" type='text' name='user_name' bindInput='usernameinput' autofocus placeholder='请输入你的学号'></input>
+    </view>
+    <view class='margin'>
+      <view class='margin-bottom'>密码</view>
+      <input class="inputstyle" name='user_pass' bindInput='userpasswordinput' password type='password' maxlength='20' autofocus placeholder='请输入你的密码'></input>
+    </view>
+    <view class='flex padding justify-center'>
+      <button class='cu-btn bg-cyan lg shadow button-hover padding-sm margin-xs' form-type='submit'
+      open-type='getUserInfo' bindgetuserinfo="getUserInfo">登录</button>
+    </view>
+    <navigator url="/pages/register/register">
+      <view class='text-center'>没有账号？立即注册！</view>
+    </navigator>
+
+  </view>
+</form>

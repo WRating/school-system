@@ -1,0 +1,48 @@
+<!--pages/register/register.wxml-->
+
+
+<scroll-view scroll-y class="scrollPage">
+  <view class="UCenter-bg">
+    <text>湖南科技大学</text>
+    <image src="/images/wave.gif" mode="scaleToFill" class="gif-wave"></image>
+  </view>
+  <form bindsubmit='formsubmit'>
+    <view class="padding-xl bg-white">
+      <view class='margin'>
+        <view class='margin-bottom'>姓名</view>
+        <input class="inputstyle" name="xingming" type='text' placeholder='请输入你的姓名'></input>
+      </view>
+      <view class='margin'>
+        <view class='margin-bottom'>学号</view>
+        <input class="inputstyle" name='xuehao' type='number' placeholder='请输入你的学号'></input>
+      </view>
+      <view class='margin'>
+        <view class='margin-bottom'>密码</view>
+        <input class="inputstyle" password name='password' type='number' maxlength="20" placeholder='请输入你的密码'></input>
+      </view>
+      <view class='margin'>
+        <view class='margin-bottom'>确认密码</view>
+        <input class="inputstyle" password name='repassword' type='number' maxlength="20" placeholder='请确认密码'></input>
+      </view>
+      <view class='margin'>
+        <view class='margin-bottom'>毕业学院</view>
+        <input class="inputstyle" name='college' type='text' placeholder='请输入你的毕业学院'></input>
+      </view>
+      <view class='margin'>
+        <view class='margin-bottom'>毕业班级</view>
+        <input class="inputstyle" name='classroom' type='text' placeholder='请输入你的毕业班级'></input>
+      </view>
+      <view class='margin'>
+        <view class='margin-bottom'>入学时间</view>
+        <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+          <input class='inputstyle' name='time' type='time' value='{{time}}' placeholder='请输入你的入学时间'></input>
+        </picker>
+      </view>
+      <view class='box bg-white text-center'>
+        <button class='cu-btn bg-cyan lg shadow button-hover' form-type='submit'>注册</button>
+      </view>
+
+    </view>
+  </form>
+  <view class="cu-tabbar-height"></view>
+</scroll-view>

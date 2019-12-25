@@ -1,0 +1,90 @@
+<!--pages/Personal-Center/comment/comment.wxml-->
+<cu-custom bgColor="bg-gradual-blue" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">校友趣味系统</view>
+</cu-custom>
+
+<view class='box'>
+  <view class='logo'>
+    <view class='image2'>
+      <image src='/images/message.png' class='image1' />
+    </view>
+    <view class='text1'>
+      <text>您的意见反馈是我们成长的滋养!</text>
+    </view>
+  </view>
+
+  <view style='background-color:#FFFFFF;margin-top:10rpx;'>
+    <view style='display:flex;justify-content:center;margin-top:20rpx' class='text1'>
+      <text>欢迎为本小程序评分(*^_^*)</text>
+    </view>
+
+    <view style='display:flex;justify-content:center;margin-bottom:20rpx;margin-top:20rpx'>
+      <block wx:for="{{stars}}" wx:key="index">
+        <image bindtap="bindclick" data-in='star' id='{{index+1}}' src='/images/star.png' style='height:60rpx;width:60rpx;margin-left:10rpx;margin-right:10rpx;' />
+      </block>
+
+      <block wx:for="{{nostars}}" wx:key="index">
+        <image bindtap="bindclick" data-in='nostar' id='{{index+1}}' src='/images/nostar.png' style='height:60rpx;width:60rpx;margin-left:10rpx;margin-right:10rpx;' />
+      </block>
+    </view>
+  </view>
+
+  <view class='font1'>
+    <text>请选择反馈问题的类型</text>
+  </view>
+
+  <form bindsubmit='formclick'>
+
+    <view class="input1">
+      <view style='display:flex;flex-direction:row;'>
+        <view>功能异常</view>
+        <view class="input2">
+          <text style='color:#9E9E9E'>不能正常使用现有功能</text>
+        </view>
+      </view>
+      <view class='checked1'>
+        <checkbox-group bindchange='checkchange'>
+          <checkbox class='round' name='checkbox1' value='功能异常' style='margin-right:35rpx' />
+        </checkbox-group>
+      </view>
+    </view>
+
+    <view class="input1" style='margin-top:1px'>
+      <view style='display:flex;flex-direction:row;'>
+        <view>其他问题</view>
+        <view class="input2">
+          <text style='color:#9E9E9E'>用的不爽，您有新的建议</text>
+        </view>
+      </view>
+      <view class='checked1'>
+        <checkbox-group bindchange='checkchange1'>
+          <checkbox class='round' name='checkbox2' value='其他问题' style='margin-right:35rpx' />
+        </checkbox-group>
+      </view>
+    </view>
+
+    <view style='margin-top:10px;'>
+      <text class='font1'>联系方式</text>
+      <view class="cu-form-group input1" style='margin-top:5rpx'>
+        <input placeholder="手机或邮箱等联系方式" name='eamil' class='radius' maxlength="30"></input>
+      </view>
+    </view>
+
+    <view class='font1'>
+      <text>问题和意见(必填)</text>
+    </view>
+
+
+    <view class="cu-form-group  margin-top textarea1 " wx:hide="{{modalName==null}}" style='font-size:28rpx;'>
+      <textarea placeholder="请描述您的问题或建议" name='suggest' maxlength="300" bindinput='inputs' style="margin-left:25rpx;color: #808080"></textarea>
+      <view class="numposition">
+        <text>{{wordnumber}}/300</text>
+      </view>
+    </view>
+
+    <view style='background-color:#F2F2F2;margin-top:20rpx;display:flex;justify-content:center;width:100%'>
+      <button class='cu-btn round' style="width:80%;background-color:#39B54A;color:#FFFFFF;" form-type='submit'>提交</button>
+    </view>
+  </form>
+</view>

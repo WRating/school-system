@@ -1,0 +1,19 @@
+<!--pages/home/home.wxml-->
+
+<scroll-view scroll-y class="scrollPage bg-white">
+<view class="UCenter-bg">
+  <text>湖南科技大学</text>
+  <image src="/images/wave.gif" mode="scaleToFill" class="gif-wave"></image>
+</view>
+
+<!-- 中间的选择栏 -->
+
+  <view class='nav-list'>
+    <navigator open-type="navigate" hover-class='none' url="/pages/{{item.name}}/home/home" class="nav-li bg-{{item.color}}" wx:for="{{elements}}" wx:key="key">
+      <view class="nav-title">{{item.title}}</view>
+      <view class="nav-name">{{item.name}}</view>
+      <text class='cuIcon-{{item.icon}}'></text>
+    </navigator>
+  </view>
+</scroll-view>
+

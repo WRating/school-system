@@ -1,0 +1,20 @@
+<!--pages/Emotional-test/home/home.wxml-->
+<cu-custom bgColor="bg-gradual-blue" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">校友趣味系统</view>
+</cu-custom>
+
+<view class="container">
+  <view class="title">第{{question.no}}题</view>
+  <view class="question">{{question.stem}}</view>
+  <view wx:if="{{question.img}}">
+  <image src="{{question.img}}" mode="aspectFit" class="tupian"></image>
+  </view>
+  <view class="options">
+    <view wx:key="option" wx:for="{{question.options}}">
+      <button animation="{{wrongid==item.option? animationData:''}}" type="{{correctid==item.option?'primary':''}}" class="option" bindtap='selectAnswer' data-id="{{item.option}}" disabled='{{disable}}'>{{item.option}}. {{item.content}}</button>
+    </view>
+  </view>
+  <view class="footer">
+    </view>
+</view>

@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "home": "/pages/home/home",
+    "register": "/pages/register/register",
+    "login": "/pages/Alumni-login/home/home"
+  }
+}

@@ -1,0 +1,29 @@
+<!--pages/Question-collection/home/home.wxml-->
+<cu-custom bgColor="bg-gradual-blue" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">校友趣味系统</view>
+</cu-custom>
+<view class="padding-lr-lg ">
+  <view class="radius shadow">
+    <image class='img' src='/images/timg.jpg' />
+  </view>
+</view>
+
+<view class="padding-lr-lg margin-top">
+  <view class="box bg-white radius">
+    <image class="flex-sub" src='/images/1.jpg'></image>
+    <view class="flex-twice bg-grey padding-sm margin-sm radius text-center text-lg" bindtap='goToChoice'>单选题收集</view>
+  </view>
+</view>
+<!-- <view class="padding-lr-lg margin-top">
+  <view class="box bg-white radius">
+    <image class="flex-sub" src='/images/3.jpg'></image>
+    <view class="flex-twice bg-grey padding-sm margin-sm radius text-center text-lg" bindtap='goTotest'>多选题</view>
+  </view>
+</view> -->
+<view class="padding-lr-lg margin-top">
+  <view class="box bg-white radius">
+    <image class="flex-sub" src='/images/2.jpg'></image>
+    <view class="flex-twice bg-grey padding-sm margin-sm radius text-center text-lg"                       bindtap='goToJudge'>判断题收集</view>
+  </view>
+</view>

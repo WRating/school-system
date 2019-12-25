@@ -1,0 +1,26 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/register/register",
+    "pages/home/home",
+    "pages/Alumni-login/home/home",
+    "pages/Emotional-test/home/home",
+    "pages/Question-Collection/home/home",
+    "pages/Question-Collection/choice-question/choice-question",
+    "pages/Question-Collection/judgement-question/judgement-question",
+    "pages/Personal-Center/home/home",
+    "pages/Personal-Center/comment/comment",
+    "pages/Score-Rank/home/home"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "ColorUI",
+    "navigationStyle": "custom",
+    "navigationBarTextStyle": "white"
+  },
+  "usingComponents": {
+    "cu-custom": "/colorui/components/cu-custom"
+  },
+  "sitemapLocation": "sitemap.json"
+}

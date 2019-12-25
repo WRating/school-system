@@ -1,0 +1,15 @@
+/* pages/register/register.wxss */
+.inputstyle {
+  box-shadow: var(--ShadowSize) var(--blackShadow);
+  background-color: var(--white);
+  color: var(--darkGray);
+  --ShadowSize: 0 1rpx 6rpx;
+  border-radius: 6rpx;
+  height: 65rpx;
+}
+.img{
+  width:170rpx;
+  height: 170rpx;
+  margin-top: 20rpx;
+}
+

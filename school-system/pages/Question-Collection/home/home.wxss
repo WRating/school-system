@@ -1,0 +1,25 @@
+/* pages/Question-collection/home/home.wxss */
+.img{
+  align-items: center;
+  justify-content: center;
+  height: 300rpx;
+  background-color: #F6F6F6;
+  margin-top:20rpx;
+}
+.box{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200rpx;
+  background-color: white;
+}
+.box image{
+  height: 200rpx;
+  width: 200rpx;
+}
+.btn{
+  padding: 0 40rpx;
+	font-size: 32rpx;
+	height: 80rpx;
+  width: 70%;
+}

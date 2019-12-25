@@ -1,0 +1,18 @@
+<!--pages/Personal-Center/home/home.wxml-->
+<cu-custom bgColor="bg-gradual-blue" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">校友趣味系统</view>
+</cu-custom>
+
+<view class="cu-timeline" wx:for="{{record}}" wx:key="record">
+  <view class="cu-item cur cuIcon-noticefill">
+    <view class="bg-cyan shadow-blur padding-xs radius">
+      <view class="flex  p-xs margin-sm mb-sm">
+      <view class="flex-twice">{{item.time}}</view>
+      <view class="flex-sub">分数：{{item.score}}分</view>
+      
+    </view>
+    </view>
+  </view>
+
+</view>

@@ -1,0 +1,51 @@
+
+<scroll-view scroll-y class="scrollPage bg-white">
+<cu-custom bgColor="bg-gradual-blue" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">积分排行榜10强</view>
+</cu-custom>
+
+<!-- <view class="padding-sm">
+  <view class="bg-cyan padding radius text-center shadow-blur">
+    <view class="grid col-3">
+      <view class="margin-top-sm">
+        <view>排名</view>
+        <view class="margin-top-xs">1</view>
+      </view>
+      <view>
+        <open-data class="cu-avatar lg round " type="userAvatarUrl"></open-data>
+        <view>
+          <open-data type="userNickName"></open-data>
+        </view>
+      </view>
+      <view class="margin-top-sm">
+        <view>分数</view>
+        <view class="margin-top-xs">10000</view>
+      </view>
+    </view>
+  </view>
+</view> -->
+
+<view class="bg-white margin-lr-xs" wx:for="{{examrecordlist}}" wx:key="key">
+  <view class="flex p-xs margin-bottom-sm mb-sm">
+    <view class="flex-sub padding-top-sm margin-top-xs">
+      <view class="text-center text-xxl text-orange padding-xs">{{item.rank}}</view>
+    </view>
+    <view class="flex-sub margin-xs radius">
+      <view class="cu-avatar lg round margin-top-ms" style="background-image:url({{item.user_image}});"></view>
+
+    </view>
+    <view class=" flex-twice">
+      <view class="text-left text-lg margin-top-lg">{{item.user_name}}</view>
+    </view>
+    <view class="flex-sub  padding-sm margin-xs">
+      <view class="text-center text-xxl text-orange padding-xs">{{item.score}}</view>
+    </view>
+    <view class="flex-sub padding-top margin-top-xs">
+    <live-like count="{{count}}"></live-like>
+      <view class="cuIcon-likefill lg text-shadow text-red text-center" style="font-size:20px;" bindtap="clickHandler" ></view>
+    </view>
+  </view>
+</view>
+
+</scroll-view>

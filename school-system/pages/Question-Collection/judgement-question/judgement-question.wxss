@@ -1,0 +1,5 @@
+/* pages/Question-Collection/judgement-question/judgement-question.wxss */
+.imgstyle{
+  margin-top:20rpx;
+  margin-left: 285rpx;
+}

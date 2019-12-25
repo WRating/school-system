@@ -1,0 +1,27 @@
+<home wx:if="{{PageCur=='home'}}"></home>
+<register wx:if="{{PageCur=='register'}}"></register>
+<login wx:if="{{PageCur=='login'}}"></login>
+
+<!-- 底部导航栏 -->
+<view class="cu-bar tabbar bg-white shadow foot">
+<view class="action" bindtap="NavChange" data-cur="home">
+    <view class='cuIcon-cu-image'>
+      <image src="/images/tabbar/home{{PageCur=='home'?'_cur':''}}.png"></image>
+    </view>
+    <view class="{{PageCur=='home'?'text-green':'text-gray'}}">首页</view>
+  </view>
+
+   <view class="action" bindtap="NavChange" data-cur="login">
+    <view class='cuIcon-cu-image'>
+      <image src="/images/tabbar/login{{PageCur=='login'?'_cur':''}}.png"></image>
+    </view>
+    <view class="{{PageCur=='login'?'text-green':'text-gray'}}">登录</view>
+  </view>
+
+  <view class="action" bindtap="NavChange" data-cur="register">
+    <view class='cuIcon-cu-image'>
+      <image src="/images/tabbar/register{{PageCur=='register'?'_cur':''}}.png"></image>
+    </view>
+    <view class="{{PageCur=='register'?'text-green':'text-gray'}}">注册</view>
+  </view>
+</view>
